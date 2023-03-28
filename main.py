@@ -182,8 +182,9 @@ elif choice_s == "Webcam Hand Detection":
     st.markdown(webcam_subheader, unsafe_allow_html=True)
     webcam_secondheader = '<p style="font-family:Monospace; color:LightSteelBlue; font-size: 10px;">Exception : It will take one or two seconds before it starts detection.</p>'
     st.markdown(webcam_secondheader, unsafe_allow_html=True)
+
     RTC_CONFIGURATION = RTCConfiguration(
-        {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
+        {"iceServers": [{"urls": ["relay1.expressturn.com:3478"]}]}
     )
     webrtc_ctx = webrtc_streamer(
         key="WYH",
