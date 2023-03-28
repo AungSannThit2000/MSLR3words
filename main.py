@@ -184,7 +184,9 @@ elif choice_s == "Webcam Hand Detection":
     st.markdown(webcam_secondheader, unsafe_allow_html=True)
 
     RTC_CONFIGURATION = RTCConfiguration(
-        {"iceServers": [{"urls": ["stun:relay.metered.ca:80"]}]}
+        {"iceServers": [{"urls": ["turn:turn.anyfirewall.com:443?transport=tcp"],
+                         "username": ["webrtc"],
+                         "credential":["webrtc"]}]}
     )
     webrtc_ctx = webrtc_streamer(
         key="WYH",
